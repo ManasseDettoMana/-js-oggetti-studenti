@@ -11,30 +11,40 @@ for(let key in studente){
 
 let studenti = [
     {
-        'nome' : 'giovanni',
-        'cognome' : 'rossi',
-        'eta' : '33',
+        nome : 'giovanni',
+        cognome : 'rossi',
+        eta : '33',
     },
     {
-        'nome' : 'marco',
-        'cognome' : 'gialli',
-        'eta' : '27',
+        nome : 'marco',
+        cognome : 'gialli',
+        eta : '27',
     },
     {
-        'nome' : 'luca',
-        'cognome' : 'verdi',
-        'eta' : '18',
+        nome : 'luca',
+        cognome : 'verdi',
+        eta : '18',
     }
 ];
 
-for(let key in studenti){
-    console.log(studenti[key]);
+for(let i=0;i<studenti.length;i++){
+    const studenteCorrente = studenti[i];
+
+    console.log(studenteCorrente['nome']);
+    console.log(studenteCorrente['cognome']);
+    console.log(studenteCorrente['eta']);
 }
 
-studenti.push(prompt("Nome"));
-studenti.push(prompt("Cognome"));
-studenti.push(parseInt(prompt("Eta")));
+const nomeUtente = prompt("Nome");
+const cognmomeUtente = prompt("Cognome");
+const etaUtente = parseInt(prompt("eta"));
 
-for(let key in studenti){
-    console.log(studenti[key]);
-}
+
+let nuovoUtente = {};
+
+nuovoUtente.nome = nomeUtente;
+nuovoUtente.cognmome = cognmomeUtente;
+nuovoUtente.eta = etaUtente;
+
+
+console.log(nuovoUtente);
